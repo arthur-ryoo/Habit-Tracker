@@ -8,6 +8,10 @@ class Habit extends Component {
     handleIncrement = (event) => {
         this.setState({ count: this.state.count + 1 })
     }
+    handleDecrement = (event) => {
+        const count = this.state.count - 1;
+        this.setState({ count: count < 0 ? 0 : count })
+    }
     render() {
         return (
             <li className="habit">
@@ -16,7 +20,7 @@ class Habit extends Component {
                 <button className="habit-button habit-increase" onClick={this.handleIncrement}>
                     <i className="fas fa-plus-square"></i>
                 </button>
-                <button className="habit-button habit-decrease">
+                <button className="habit-button habit-decrease" onClick={this.handleDecrement}>
                     <i className="fas fa-minus-square"></i>
                 </button>
                 <button className="habit-button habit-delete">
