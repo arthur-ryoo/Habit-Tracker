@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Habit from './components/Habit';
+import Habits from './components/Habits';
 
 function App() {
   return (
-    <Habit />
+    <Habits />
   );
 }
 
